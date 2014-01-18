@@ -237,9 +237,12 @@ tstp(int ignored)
     wrefresh(curscr);
     getyx(curscr, y, x);
     mvcur(y, x, oy, ox);
-    fflush(stdout);
-    curscr->_cury = oy;
-    curscr->_curx = ox;
+    fflush(stdout);       
+    
+    // fix by Patrick Mueller 2014-01-17 - replace cursrc->_* with wmove()
+    // curscr->_cury = oy;
+    // curscr->_curx = ox;
+    wmove(curscr, oy, ox);
 }
 
 /*

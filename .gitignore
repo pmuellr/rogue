@@ -1,0 +1,12 @@
+*.o
+Makefile
+config.h
+config.log
+config.status
+rogue
+rogue.6
+rogue.cat
+rogue.doc
+rogue.html
+rogue.me
+rogue.scr
